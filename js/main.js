@@ -1,4 +1,6 @@
-// Año actual en footer
+// ======================
+//  AÑO ACTUAL EN FOOTER
+// ======================
 (function setYear() {
   const yearEl = document.getElementById('displayYear');
   if (yearEl) {
@@ -6,7 +8,9 @@
   }
 })();
 
-// Toggle menú móvil
+// ======================
+//   MENÚ MÓVIL
+// ======================
 (function mobileNav() {
   const navToggle = document.getElementById('navToggle');
   const body = document.body;
@@ -17,7 +21,6 @@
     body.classList.toggle('nav-open');
   });
 
-  // Cerrar menú al hacer clic en un enlace del menú móvil
   const mobileNav = document.getElementById('mobileNav');
   if (mobileNav) {
     mobileNav.addEventListener('click', (e) => {
@@ -28,7 +31,9 @@
   }
 })();
 
-// Modo oscuro / claro con almacenamiento en localStorage
+// ======================
+//   TEMA OSCURO / CLARO
+// ======================
 (function themeToggle() {
   const btn = document.getElementById('themeToggle');
   if (!btn) return;
@@ -36,7 +41,6 @@
   const body = document.body;
   const THEME_KEY = 'nortenochilis-theme';
 
-  // Cargar tema guardado
   const saved = localStorage.getItem(THEME_KEY);
   if (saved === 'dark') {
     body.classList.add('theme-dark');
@@ -45,24 +49,26 @@
   const updateIcon = () => {
     const icon = btn.querySelector('i');
     if (!icon) return;
-    if (body.classList.contains('theme-dark')) {
-      icon.className = 'fa-solid fa-sun';
-    } else {
-      icon.className = 'fa-solid fa-moon';
-    }
+    icon.className = body.classList.contains('theme-dark')
+      ? 'fa-solid fa-sun'
+      : 'fa-solid fa-moon';
   };
 
   updateIcon();
 
   btn.addEventListener('click', () => {
     body.classList.toggle('theme-dark');
-    const isDark = body.classList.contains('theme-dark');
-    localStorage.setItem(THEME_KEY, isDark ? 'dark' : 'light');
+    localStorage.setItem(
+      THEME_KEY,
+      body.classList.contains('theme-dark') ? 'dark' : 'light'
+    );
     updateIcon();
   });
 })();
 
-// Slider básico
+// ======================
+//        SLIDER
+// ======================
 (function heroSlider() {
   const slider = document.querySelector('[data-slider]');
   if (!slider) return;
@@ -72,7 +78,7 @@
 
   let currentIndex = 0;
   let intervalId = null;
-  const AUTO_INTERVAL = 8000;
+  const AUTO_INTERVAL = 6000; // velocidad del autoplay
 
   const dotsContainer = document.querySelector('[data-dots]');
   const prevBtn = document.querySelector('[data-prev]');
@@ -80,6 +86,7 @@
 
   const dots = [];
 
+  // Crear puntos del slider
   if (dotsContainer) {
     slides.forEach((_, index) => {
       const dot = document.createElement('button');
@@ -132,18 +139,47 @@
     startAutoPlay();
   }
 
-  // Eventos botones
+  // Botones manuales
   if (nextBtn) nextBtn.addEventListener('click', next);
   if (prevBtn) prevBtn.addEventListener('click', prev);
 
-  // Pausa en hover sobre la zona inferior de controles
+  // Pausa en hover
   const controlsArea = document.querySelector('.slider-controls');
   if (controlsArea) {
     controlsArea.addEventListener('mouseenter', stopAutoPlay);
     controlsArea.addEventListener('mouseleave', startAutoPlay);
   }
 
-  // Inicializar
-  setActiveSlide(0);
-  startAutoPlay();
+  // ===========================
+  //   PRE-CARGA DE IMÁGENES
+  //   (SOLUCIÓN DEFINITIVA)
+  // ===========================
+  function waitForImages() {
+    const imgs = [];
+
+    slides.forEach(slide => {
+      const bg = slide.style.backgroundImage;
+      if (bg && bg.includes("url")) {
+        const url = bg.slice(5, -2);
+        const img = new Image();
+        img.src = url;
+        imgs.push(img);
+      }
+    });
+
+    let loaded = 0;
+
+    imgs.forEach(img => {
+      img.onload = () => {
+        loaded++;
+        if (loaded === imgs.length) {
+          // Iniciar slider solo cuando ya cargaron todas
+          setActiveSlide(0);
+          startAutoPlay();
+        }
+      };
+    });
+  }
+
+  waitForImages();
 })();
