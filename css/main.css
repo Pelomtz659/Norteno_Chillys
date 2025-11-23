@@ -848,3 +848,11 @@ body.theme-dark .btn-outline {
     padding: 1.4rem 1.2rem;
   }
 }
+
+
+/* SEPARACIÓN DEL BOTÓN "VER MENÚ COMPLETO" */
+.section-actions {
+  margin-top: 2.2rem; /* Súbelo o bájalo según te guste */
+  display: flex;
+  justify-content: center;
+}
