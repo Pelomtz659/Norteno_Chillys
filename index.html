@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Norteño Chilis — Parrilladas y Tacos en Durango</title>
+
+  <meta name="description" content="Norteño Chilis, restaurante en Durango con parrilladas, tacos, burritos y buffet de desayuno con un ambiente elegante y el auténtico sabor de México." />
+  <meta name="keywords" content="Restaurante, Parrilladas, Tacos, Burritos, Buffet, Desayuno, Norteño Chilis, Durango" />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Iconos (opcional, CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img src="images/logo.jpeg" alt="Logo Norteño Chilis">
+          <span>Norteño Chilis</span>
+        </a>
+
+        <nav class="main-nav">
+          <a href="index.html" class="active">Inicio</a>
+          <a href="about.html">Nosotros</a>
+          <a href="blog.html">Menú</a>
+          <a href="testimonial.html">Contacto</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- NAV MÓVIL -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="active">Inicio</a>
+      <a href="about.html">Nosotros</a>
+      <a href="blog.html">Menú</a>
+      <a href="testimonial.html">Contacto</a>
+    </nav>
+
+    <!-- HERO + SLIDER -->
+    <main>
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-slider" data-slider>
+          <div class="hero-slide is-active" style="background-image: url('images/slider-1.jpg');">
+            <div class="hero-content container">
+              <p class="hero-tagline">El sabor de México, con elegancia</p>
+              <h1 class="hero-title">Parrilladas & Tacos con estilo único</h1>
+              <p class="hero-description">
+                Disfruta cortes a la parrilla, tacos, burritos y buffet de desayuno en un ambiente cálido,
+                acogedor y sofisticado.
+              </p>
+              <div class="hero-actions">
+                <a href="blog.html" class="btn btn-primary">Ver Menú</a>
+                <a href="testimonial.html" class="btn btn-outline">Reservar mesa</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-slide" style="background-image: url('images/slider-2.jpg');">
+            <div class="hero-content container">
+              <p class="hero-tagline">Desayunos y buffet</p>
+              <h1 class="hero-title">Menudo, guisos y café de olla</h1>
+              <p class="hero-description">
+                Empieza tu día con un desayuno al estilo norteño: buffet con guisos caseros, pan caliente
+                y el mejor ambiente familiar.
+              </p>
+              <div class="hero-actions">
+                <a href="blog.html#desayunos" class="btn btn-primary">Ver desayunos</a>
+                <a href="about.html" class="btn btn-outline">Conócenos</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-slide" style="background-image: url('images/slider-3.jpg');">
+            <div class="hero-content container">
+              <p class="hero-tagline">Ambiente elegante y cálido</p>
+              <h1 class="hero-title">Perfecto para familia y amigos</h1>
+              <p class="hero-description">
+                Celebra momentos importantes con el mejor servicio, carta variada y un espacio diseñado
+                para sentirse como en casa.
+              </p>
+              <div class="hero-actions">
+                <a href="testimonial.html#ubicacion" class="btn btn-primary">Ver ubicación</a>
+                <a href="blog.html#parrilladas" class="btn btn-outline">Parrilladas</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls container">
+          <button class="slider-arrow" data-prev><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="slider-dots" data-dots></div>
+          <button class="slider-arrow" data-next><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </section>
+
+      <!-- DESTACADOS -->
+      <section class="section section-highlights">
+        <div class="container">
+          <div class="section-header">
+            <h2>Una experiencia norteña con toque elegante</h2>
+            <p>Más que un restaurante, un lugar para compartir sabores, historias y momentos.</p>
+          </div>
+          <div class="grid grid-3">
+            <article class="card highlight-card">
+              <span class="card-icon"><i class="fa-solid fa-pepper-hot"></i></span>
+              <h3>Sabores auténticos</h3>
+              <p>
+                Recetas inspiradas en el norte de México: salsas, marinados y guarniciones con carácter,
+                pero con una presentación moderna.
+              </p>
+            </article>
+
+            <article class="card highlight-card">
+              <span class="card-icon"><i class="fa-solid fa-mug-hot"></i></span>
+              <h3>Ambiente cálido</h3>
+              <p>
+                Tonos cafés, luz cálida y detalles de madera que crean un espacio cómodo y elegante para
+                desayunos, comidas y cenas.
+              </p>
+            </article>
+
+            <article class="card highlight-card">
+              <span class="card-icon"><i class="fa-solid fa-utensils"></i></span>
+              <h3>Servicio cercano</h3>
+              <p>
+                Un equipo atento que te acompaña desde que llegas hasta el último sorbo de café o la
+                última tortilla recién hecha.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLATILLOS ESTRELLA -->
+      <section class="section section-menu-preview">
+        <div class="container">
+          <div class="section-header">
+            <h2>Platillos estrella</h2>
+            <p>Algunos de los favoritos de nuestros clientes.</p>
+          </div>
+          <div class="grid grid-3">
+            <article class="card dish-card">
+              <div class="dish-image" style="background-image: url('images/parrillada.jpg');"></div>
+              <div class="dish-body">
+                <h3>Parrillada Norteño Chilis</h3>
+                <p>Cortes de res, pollo y chorizo, acompañados de nopales, cebollitas y salsas de la casa.</p>
+                <span class="dish-tag">Para compartir</span>
+              </div>
+            </article>
+
+            <article class="card dish-card">
+              <div class="dish-image" style="background-image: url('images/tacos.jpg');"></div>
+              <div class="dish-body">
+                <h3>Tacos de arrachera</h3>
+                <p>Arrachera marinada al estilo norteño, tortillas de maíz hechas a mano y guacamole fresco.</p>
+                <span class="dish-tag">Clásico</span>
+              </div>
+            </article>
+
+            <article class="card dish-card">
+              <div class="dish-image" style="background-image: url('images/buffet.jpg');"></div>
+              <div class="dish-body">
+                <h3>Buffet de desayuno</h3>
+                <p>Menudo, guisos rancheros, chilaquiles, fruta fresca y pan dulce, todo en un mismo lugar.</p>
+                <span class="dish-tag">Fin de semana</span>
+              </div>
+            </article>
+          </div>
+          <div class="section-actions">
+            <a href="blog.html" class="btn btn-primary">Ver menú completo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCIA / NOSOTROS PREVIEW -->
+      <section class="section section-story">
+        <div class="container story-grid">
+          <div class="story-text">
+            <h2>Norteño Chilis en Durango</h2>
+            <p>
+              Nacimos con la idea de traer el sabor del norte a Durango, pero en un entorno elegante,
+              cómodo y pensado para disfrutar con calma.
+            </p>
+            <p>
+              Cada detalle —desde la selección de cortes hasta la música y la vajilla— busca crear una
+              experiencia completa: sabores intensos, ambiente cálido y servicio cercano.
+            </p>
+            <a href="about.html" class="btn btn-outline">Conoce nuestra historia</a>
+          </div>
+          <div class="story-image">
+            <img src="images/sala.jpg" alt="Interior elegante de Norteño Chilis">
+          </div>
+        </div>
+      </section>
+
+      <!-- INFO RÁPIDA -->
+      <section class="section section-info">
+        <div class="container grid grid-3 info-grid">
+          <div class="info-block">
+            <h3>Horarios</h3>
+            <p><strong>Desayunos buffet:</strong> Sábados y domingos, 8:00 am - 12:00 pm</p>
+            <p><strong>Comidas y cenas:</strong> Lunes a domingo, 1:00 pm - 11:00 pm</p>
+          </div>
+          <div class="info-block">
+            <h3>Ubicación</h3>
+            <p>
+              <span class="info-note">Zona residencial, ambiente tranquilo y familiar.</span>
+            </p>
+          </div>
+          <div class="info-block">
+            <h3>Reservaciones</h3>
+            <p>Teléfono / WhatsApp: <strong>+52 618 000 0000</strong></p>
+            <p>También puedes reservar desde la sección de <a href="testimonial.html">Contacto</a>.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <p>&copy; <span id="displayYear"></span> Norteño Chilis. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-right">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

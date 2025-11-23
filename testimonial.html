@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto & Reservaciones | Norteño Chilis</title>
+
+  <meta name="description" content="Contáctanos para reservaciones, eventos especiales o dudas sobre el menú de Norteño Chilis en Durango." />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <div class="page subpage">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img src="images/logo.jpeg" alt="Logo Norteño Chilis">
+          <span>Norteño Chilis</span>
+        </a>
+
+        <nav class="main-nav">
+          <a href="index.html">Inicio</a>
+          <a href="about.html">Nosotros</a>
+          <a href="blog.html">Menú</a>
+          <a href="testimonial.html" class="active">Contacto</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html">Inicio</a>
+      <a href="about.html">Nosotros</a>
+      <a href="blog.html">Menú</a>
+      <a href="testimonial.html" class="active">Contacto</a>
+    </nav>
+
+    <main id="ubicacion">
+      <!-- HERO INTERIOR -->
+      <section class="inner-hero">
+        <div class="container">
+          <h1>Contacto & Reservaciones</h1>
+          <p>Estamos listos para ayudarte con tu próxima visita.</p>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section class="section">
+        <div class="container contact-grid">
+          <div class="contact-info">
+            <h2>Datos de contacto</h2>
+            <p>
+              Puedes escribirnos para reservaciones, eventos especiales o cualquier duda sobre el menú.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+              </li>
+              <li>
+                <i class="fa-brands fa-whatsapp"></i>
+                +52 618 000 0000
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                (618) 000 0000
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                contacto@nortenchilis.mx
+              </li>
+            </ul>
+
+            <h3>Horarios</h3>
+            <p><strong>Desayunos buffet:</strong> Sábados y domingos, 8:00 am - 12:00 pm</p>
+            <p><strong>Comidas y cenas:</strong> Lunes a domingo, 1:00 pm - 11:00 pm</p>
+          </div>
+
+          <div class="contact-form-wrapper">
+            <h2>Envíanos un mensaje</h2>
+            <form class="contact-form">
+              <div class="form-row">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+              </div>
+              <div class="form-row">
+                <label for="telefono">Teléfono / WhatsApp</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+52 ..." required>
+              </div>
+              <div class="form-row">
+                <label for="personas">Número de personas</label>
+                <input type="number" id="personas" name="personas" min="1" placeholder="Ej. 4">
+              </div>
+              <div class="form-row">
+                <label for="fecha">Fecha de visita</label>
+                <input type="date" id="fecha" name="fecha">
+              </div>
+              <div class="form-row">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tu mensaje o detalles de la reservación"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAPA -->
+      <section class="section section-soft">
+        <div class="container">
+          <h2>Ubicación</h2>
+          <div class="map-placeholder">
+            <!-- Aquí puedes incrustar un iframe real de Google Maps -->
+            <span>Mapa de Google Maps</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <p>&copy; <span id="displayYear"></span> Norteño Chilis. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-right">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
