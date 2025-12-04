@@ -32,41 +32,6 @@
 })();
 
 // ======================
-//   TEMA OSCURO / CLARO
-// ======================
-(function themeToggle() {
-  const btn = document.getElementById('themeToggle');
-  if (!btn) return;
-
-  const body = document.body;
-  const THEME_KEY = 'nortenochilis-theme';
-
-  const saved = localStorage.getItem(THEME_KEY);
-  if (saved === 'dark') {
-    body.classList.add('theme-dark');
-  }
-
-  const updateIcon = () => {
-    const icon = btn.querySelector('i');
-    if (!icon) return;
-    icon.className = body.classList.contains('theme-dark')
-      ? 'fa-solid fa-sun'
-      : 'fa-solid fa-moon';
-  };
-
-  updateIcon();
-
-  btn.addEventListener('click', () => {
-    body.classList.toggle('theme-dark');
-    localStorage.setItem(
-      THEME_KEY,
-      body.classList.contains('theme-dark') ? 'dark' : 'light'
-    );
-    updateIcon();
-  });
-})();
-
-// ======================
 //        SLIDER
 // ======================
 (function heroSlider() {

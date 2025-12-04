@@ -39,15 +39,6 @@
           <a href="blog.html">Menú</a>
           <a href="testimonial.html">Contacto</a>
         </nav>
-
-        <div class="header-actions">
-          <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-            <i class="fa-solid fa-moon"></i>
-          </button>
-          <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
-            <span></span><span></span><span></span>
-          </button>
-        </div>
       </div>
     </header>
 
@@ -63,59 +54,65 @@
     <main>
       <section class="hero">
         <div class="hero-overlay"></div>
+  
         <div class="hero-slider" data-slider>
-          <div class="hero-slide is-active" style="background-image: url('images/slider-1.jpg');">
-            <div class="hero-content container">
-              <p class="hero-tagline">El sabor de México, con elegancia</p>
-              <h1 class="hero-title">Parrilladas & Tacos con estilo único</h1>
-              <p class="hero-description">
-                Disfruta cortes a la parrilla, tacos, burritos y buffet de desayuno en un ambiente cálido,
-                acogedor y sofisticado.
-              </p>
-              <div class="hero-actions">
-                <a href="blog.html" class="btn btn-primary">Ver Menú</a>
-                <a href="testimonial.html" class="btn btn-outline">Reservar mesa</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-slide" style="background-image: url('images/slider-2.jpg');">
-            <div class="hero-content container">
-              <p class="hero-tagline">Desayunos y buffet</p>
-              <h1 class="hero-title">Menudo, guisos y café de olla</h1>
-              <p class="hero-description">
-                Empieza tu día con un desayuno al estilo norteño: buffet con guisos caseros, pan caliente
-                y el mejor ambiente familiar.
-              </p>
-              <div class="hero-actions">
-                <a href="blog.html#desayunos" class="btn btn-primary">Ver desayunos</a>
-                <a href="about.html" class="btn btn-outline">Conócenos</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-slide" style="background-image: url('images/slider-3.jpg');">
-            <div class="hero-content container">
-              <p class="hero-tagline">Ambiente elegante y cálido</p>
-              <h1 class="hero-title">Perfecto para familia y amigos</h1>
-              <p class="hero-description">
-                Celebra momentos importantes con el mejor servicio, carta variada y un espacio diseñado
-                para sentirse como en casa.
-              </p>
-              <div class="hero-actions">
-                <a href="testimonial.html#ubicacion" class="btn btn-primary">Ver ubicación</a>
-                <a href="blog.html#parrilladas" class="btn btn-outline">Parrilladas</a>
-              </div>
+    
+        <div class="hero-slide is-active" style="background-image: url('images/slider-1.jpg');">
+          <div class="hero-content container">
+            <span class="hero-tagline">El sabor de México, con elegancia</span>
+            <h1 class="hero-title">Parrilladas & Tacos <br>con estilo único</h1>
+            <p class="hero-description">
+              Disfruta cortes a la parrilla, tacos, burritos y buffet de desayuno en un ambiente cálido, acogedor y sofisticado.
+            </p>
+            <div class="hero-actions">
+              <a href="blog.html" class="btn btn-primary">Ver Menú</a>
+              <a href="testimonial.html" class="btn btn-slider-outline">Reservar mesa</a>
             </div>
           </div>
         </div>
 
-        <div class="slider-controls container">
-          <button class="slider-arrow" data-prev><i class="fa-solid fa-chevron-left"></i></button>
-          <div class="slider-dots" data-dots></div>
-          <button class="slider-arrow" data-next><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="hero-slide" style="background-image: url('images/slider-2.jpg');">
+          <div class="hero-content container">
+            <span class="hero-tagline">Desayunos y buffet</span>
+            <h1 class="hero-title">Menudo, guisos y <br>café de olla</h1>
+            <p class="hero-description">
+              Empieza tu día con un desayuno al estilo norteño: buffet con guisos caseros, pan caliente y el mejor ambiente familiar.
+            </p>
+            <div class="hero-actions">
+              <a href="blog.html#desayunos" class="btn btn-primary">Ver desayunos</a>
+              <a href="about.html" class="btn btn-slider-outline">Conócenos</a>
+            </div>
+          </div>
         </div>
-      </section>
+
+        <div class="hero-slide" style="background-image: url('images/slider-3.jpg');">
+          <div class="hero-content container">
+            <span class="hero-tagline">Ambiente elegante y cálido</span>
+            <h1 class="hero-title">Perfecto para <br>familia y amigos</h1>
+            <p class="hero-description">
+              Celebra momentos importantes con el mejor servicio, carta variada y un espacio diseñado para sentirse como en casa.
+            </p>
+            <div class="hero-actions">
+              <a href="testimonial.html#ubicacion" class="btn btn-primary">Ver ubicación</a>
+              <a href="blog.html#parrilladas" class="btn btn-slider-outline">Parrilladas</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    <div class="slider-controls container">
+      <div class="slider-arrows">
+          <button class="slider-arrow" data-prev aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="slider-arrow" data-next aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+      <div class="slider-dots" data-dots>
+          <button class="slider-dot is-active" data-index="0"></button>
+          <button class="slider-dot" data-index="1"></button>
+          <button class="slider-dot" data-index="2"></button>
+      </div>
+    </div>
+  </section>
 
       <!-- DESTACADOS -->
       <section class="section section-highlights">
@@ -209,7 +206,7 @@
               Cada detalle —desde la selección de cortes hasta la música y la vajilla— busca crear una
               experiencia completa: sabores intensos, ambiente cálido y servicio cercano.
             </p>
-            <a href="about.html" class="btn btn-outline">Conoce nuestra historia</a>
+            <a href="about.html" class="btn btn-primary">Conoce nuestra historia</a>
           </div>
           <div class="story-image">
             <img src="images/sala.jpg" alt="Interior elegante de Norteño Chilis">
