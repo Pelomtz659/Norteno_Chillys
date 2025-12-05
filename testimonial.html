@@ -36,15 +36,6 @@
           <a href="blog.html">Menú</a>
           <a href="testimonial.html" class="active">Contacto</a>
         </nav>
-
-        <div class="header-actions">
-          <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-            <i class="fa-solid fa-moon"></i>
-          </button>
-          <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
-            <span></span><span></span><span></span>
-          </button>
-        </div>
       </div>
     </header>
 
@@ -125,12 +116,24 @@
       </section>
 
       <!-- MAPA -->
-      <section class="section section-soft">
+      <section class="section sección-soft">
         <div class="container">
-          <h2>Ubicación</h2>
-          <div class="map-placeholder">
-            <!-- Aquí puedes incrustar un iframe real de Google Maps -->
-            <span>Mapa de Google Maps</span>
+          <h2>Nuestras Ubicaciones</h2>
+          <div class="location-buttons" id="locationButtons">
+            <button class="btn btn-outline location-btn" data-location="cuauhtemoc">Norteño Chilis Cuauhtémoc</button>
+            <button class="btn btn-outline location-btn" data-location="villa">Norteño. Chilis Fco. Villa</button>
+            <button class="btn btn-outline location-btn" data-location="futura">Próxima Apertura</button>
+          </div>
+          <div class="map-container">
+            <iframe
+            id="googleMap"
+            src=""
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>
